@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #002147;
+    font-family: Arial, sans-serif;
+}
+.main-container {
+    background-color: #182848;
+    color: white;
+    text-align: center;
+    padding: 30px 50px;
+    border-radius: 10px;
+    width: 350px;
+    height: 480px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid #0080ff;
+    
+}
+
+.checkbox-row {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 12px;
+
+}
+button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0055aa;
+}
+#forget {
+    float: right;
+    color: #00ccff;
+    cursor: pointer;
+    margin-top: 5px;
+}
+#create {
+    color: #00ccff;
+    cursor: pointer;
+    margin-left: 42px;
+}
+.msg{
+    text-align: left;
+    font-size: 15px;
+    margin-top: 30px;
+    color: #dbdbdb;
+}
+#demo{
+    float: left;
+    border-radius: 30px;
+    width: 100px;
+    font-size: x-small;
+    color: #8d68ff;
+    background-color: #572e9e;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#Welcome{
+    margin: 0;
+}
+.msg1{
+    color: #cbcbcb;
+    margin-bottom: 30px;
+}
+
+#tips{
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    width: 70px;
+    font-size: small;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+}
