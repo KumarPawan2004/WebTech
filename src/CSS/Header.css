@@ -1,0 +1,14 @@
+.heading {
+    display: flex;
+    width: 103%;
+    height: 66px;  
+    background-color: #2d395c;
+    box-shadow: 0 0 5px black;
+    color: rgb(195, 66, 255);
+    font-size: medium;
+    font-weight: bold;
+    align-items: center;
+    padding: 0 23px;
+    margin-left: 3px;
+  }
+  

@@ -1,101 +1,98 @@
-body {
+.signup-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;        
+    /* width: 100vw;      */
     margin: 0;
     background-color: #002147;
     font-family: Arial, sans-serif;
 }
-.main{
+.signup-page .main{
     background-color: #182848;
-    height: 530px;
+    height: 520px;
     width: 480px;
     border-radius: 20px;
     box-shadow: 0 0 15px 0 black;
     position: relative;
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
-h2{
+.signup-page h2{
     
-    margin: 24px;
     color: rgb(196, 196, 196);
     padding-top: 20px;
+    padding-left: 30px;
 }
-.star{
+.signup-page .star{
     color: rgb(214, 214, 0);
     font-size: x-large;
 }
-.para{
+.signup-page .para{
     color: whitesmoke;
-    margin-left : 24px;
+    margin-bottom: 18px;
     margin-top: -10px;
     font-size: 14px;
+    margin-left: 30px;
 }
 
-.input{
+.signup-page .input{
     display: flex;
     margin-left : 24px;
     color: white;
 }
 
 
-.input1{
+.signup-page .input1{
     margin-left : 30px;
     margin-top: 5px;
 
 }
+.signup-page .input-pswd{
+    margin-top: 5px;
+    
+}
 
-
-.info{
+.signup-page .info{
     font-size: 12px;
     color: whitesmoke;
     margin-left: 30px;
 }
-.num{
+.signup-page .num{
     font-size: 12px;
     color: whitesmoke;
     margin-left: 30px;
     
 }
-#hr{
-    width: 85%;
+.signup-page #hr{
+    width: 87%;
     height: 7px;
     border-radius: 4px;
     border: none;
     background-color: gray;
-    margin-top: 0;
-    margin-left: 30px;
+    margin-top: 5px;
+    margin-left: 33px;
 
 }
-.check{
+.signup-page .check{
     margin-left: 26px;
     color: aliceblue;
     font-size: smaller;
     margin-top: 15px;
 }
-.Terms{
+.signup-page .Terms{
     font-size: 14px;
     padding-left: 5px;
     Font-family: Likely "Inter", "Segoe UI", "Roboto", sans-serif;
 }
-.create{
-    width: 85%;
-    height: 34px;
-    text-align: center;
-    margin: 14px 0 0 30px;
-    background-color: #1b82ff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-}
-#msg{
+
+.signup-page #msg{
     color: aliceblue;
     font-size: small;
-    margin: 30px;
     margin-top: 20px;
+    margin-left: 33px;
 }
-.demo1{
+/* .demo1{
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -105,9 +102,9 @@ h2{
     padding: 5px 10px;
     border-radius: 15px;
     font-weight: normal;
-}
+} */
 
-#Sign{
+.signup-page    #Sign{
     cursor: pointer;
     color: #1b82ff;
-}
+}   
