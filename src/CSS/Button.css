@@ -1,0 +1,104 @@
+.btn-signup{
+    width: 87%;
+    height: 34px;
+    text-align: center;
+    margin: 18px 0 0 30px;
+    background-color: #1b82ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.btn-login{
+    margin-top: 30px;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-login:hover{
+    background-color: #0055aa;
+}
+.btn-tips{
+    position: absolute;
+    background-color: #0066cc;
+    bottom: 15px;
+    right: 25px;
+    width: 75px;
+    font-size: small;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    color: aliceblue;
+}
+.btn-demo{
+    float: left;
+    border-radius: 30px;
+    width: 100px;
+    font-size: x-small;
+    color: #8d68ff;
+    background-color: #572e9e;
+    padding: 5px;
+    margin-top: 10px;
+    border: none;
+    text-align: center;
+}
+.btn-profile{
+    position: absolute;
+    border: 1px solid rgb(141, 141, 142);
+    color: white;
+    right: 210px;
+    bottom: 20px;
+    width: 150px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: smaller;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color:#171f38;
+}
+#Save-btn{
+    right: 40px; 
+    background-color:rgb(48, 105, 227)
+}
+.btn-security{
+    position: absolute;
+    font-size: xx-small;
+    padding: 8px 12px;
+    border-radius: 10px;
+    right: 25px;
+    background-color:rgb(48, 105, 227);
+    margin-top: 5px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border: 1px solid rgb(85, 85, 85);
+}
+#clear{
+    right: 130px;
+    background-color: #171f38;
+    border: 1px solid rgb(85, 85, 85);
+}
+.btn-tips{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 80px ;
+    height: 45px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background-color: #002147;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid rgb(125, 255, 227); 
+}
+
+.btn-tips:hover{
+    background-color: #1e3457;
+}
