@@ -1,155 +1,163 @@
-import '../CSS/Signup.css';
-import Input from '../Components/Input';
-import Button from '../Components/Button';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-function SignUp () {
-  const navigate = useNavigate()
-  const[name,setName]=useState("")
-  const[email,setEmail]=useState("")
-  const[password,setPassword]=useState("")
-  const[confirmPassword,setconfirmPassword]=useState("")
-  
-  const[nameError,setnameError]=useState("")
-  const[emailerror,setemailError]=useState("")
-  const[passwordError,setpasswordError]=useState("")
-  const[confirmerror,setconfirmError]=useState("")
-  const handleSubmit = (e) =>{
+import styles from "../CSS/Signup.module.css";
+import Input from "../Components/Input";
+import Button from "../Components/Button";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
+function SignUp() {
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [confirmError, setConfirmError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
     let valid = true;
-    e.preventDefault()
 
-    if(name.trim() === ""){
-      setnameError("Enter a valid name")
-      valid=false
-    }else{
-      setnameError("")
+    if (name.trim() === "") {
+      setNameError("Enter a valid name");
+      valid = false;
+    } else {
+      setNameError("");
     }
 
-    if(!email.includes("@")){
-        setemailError("Enter a valid email")
-        valid=false
-    }else{
-      setemailError("")
+    if (!email.includes("@")) {
+      setEmailError("Enter a valid email");
+      valid = false;
+    } else {
+      setEmailError("");
     }
 
-    if(password.length < 6){
-        setpasswordError("Password must be at least 6 characters long.")  
-        valid=false    
-    }
-    else{
-      setpasswordError("")
-    }
-
-    if(confirmPassword!==password){
-      setconfirmError("Passwords do not match")
-      valid=false
-    }
-    else{
-      setconfirmError("")
+    if (password.length < 6) {
+      setPasswordError("Password must be at least 6 characters long.");
+      valid = false;
+    } else {
+      setPasswordError("");
     }
 
-    if(valid){
-
-      localStorage.setItem("username",name)
-      localStorage.setItem("useremail",email)
-      localStorage.setItem("password",password)
-
-      navigate("/Login")
-     
+    if (confirmPassword !== password) {
+      setConfirmError("Passwords do not match");
+      valid = false;
+    } else {
+      setConfirmError("");
     }
-   
-    
-  }
-    return(
-      <div className="signup-page">
-        <div className="main">
-        <h2>Create your account <span className="star">&#9733;</span></h2>
-        <p className="para">Sign up to access the practice dashboard.</p>
+
+    if (valid) {
+      localStorage.setItem("username", name);
+      localStorage.setItem("useremail", email);
+      localStorage.setItem("password", password);
+
+      navigate("/Login");
+    }
+  };
+
+  return (
+    <div className={styles.signupPage}>
+      <div className={styles.main}>
+        <h2 className={styles.heading}>
+          Create your account <span className={styles.star}>★</span>
+        </h2>
+        <p className={styles.para}>Sign up to access the practice dashboard.</p>
+
         <form onSubmit={handleSubmit}>
-            <div className="input">
-                
-             <Input 
-               label="First name"
-               type="text" 
-               id="fname" 
-               value={name}
-               onChange={(e)=>{setName(e.target.value)}}
-               required = {true} 
-               placeholder="Enter first name"
-               variant='signup'
-               errorText={nameError}
-             />
-             <Input 
-               label="Last name"
-               type="text" 
-               id="lname" 
-               placeholder="Enter last name"
-               variant='signup'
-             />
-                
-            </div>
-            <div className="input1">
-               <Input
-                 label="Email"
-                 type="email" 
-                 id="email" 
-                 value={email}
-                 onChange={(e)=>{setEmail(e.target.value)}}
-                 required = {true}
-                 placeholder="Enter your email"
-                 errorText={emailerror}
-                //  errorID="email-show-error"
-                 variant='signup'
-                 
-               />
-            </div>
-            <div className="input input-pswrd">
-              <Input
-                 label="Password"
-                 type="password" 
-                 id="pswrd" 
-                 value={password}
-                 onChange={(e)=>{setPassword(e.target.value)}}
-                 required = {true}
-                 placeholder="Minimum 6 characters"
-                 errorText={passwordError}
-                //  errorID="pass-show-error"
-                 variant='signup'
-             />
-             <Input
-                 label="Confirm password"
-                 type="password" 
-                 id="cnfpwd" 
-                 value={confirmPassword}
-                 onChange={(e)=>{setconfirmPassword(e.target.value)}}
-                 required = {true}
-                 placeholder="Confirm your password"
-                 errorText={confirmerror}
-                 variant='signup' 
-             />
-            </div>
-        
-        <hr id="hr"/>
-        <div className="check">
-           <input type="checkbox"  id="check" required/>
-            <label for="check">  I agree to the  <span className="Terms"> Terms</span></label>
-        </div>
-        
-        <Button
-          type="submit" 
-          id="submit"
-          text="Create Account"
-          variant='signup'
-         
-        />
+          <div className={styles.inputRow}>
+            <Input
+              label="First name"
+              type="text"
+              id="fname"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              placeholder="Enter first name"
+              variant="signup"
+              errorText={nameError}
+            />
+            <Input
+              label="Last name"
+              type="text"
+              id="lname"
+              placeholder="Enter last name"
+              variant="signup"
+            />
+          </div>
 
-    </form>
+          <div className={styles.input1}>
+            <Input
+              label="Email"
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="Enter your email"
+              errorText={emailError}
+              variant="signup"
+            />
+          </div>
 
-        <p id="msg">Already have an account? <span id="Sign" onClick={()=>{navigate("Login")}}>Sign in</span></p>
-        {/* <button className="demo1" id="demo">Seed Demo Users</button> */}
+          {/* ✅ password inputs have a separate class */}
+          <div className={styles.inputPswd}>
+            <Input
+              label="Password"
+              type="password"
+              id="pswrd"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              placeholder="Minimum 6 characters"
+              errorText={passwordError}
+              variant="signup"
+            />
+            <Input
+              label="Confirm password"
+              type="password"
+              id="cnfpwd"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+              placeholder="Confirm your password"
+              errorText={confirmError}
+              variant="signup"
+            />
+          </div>
+
+          <hr className={styles.hr} />
+
+          <div className={styles.check}>
+            <input type="checkbox" id="check" required />
+            <label htmlFor="check">
+              I agree to the <span className={styles.terms}>Terms</span>
+            </label>
+          </div>
+
+          <Button
+            type="submit"
+            id="submit"
+            text="Create Account"
+            variant="signup"
+          />
+        </form>
+
+        <p className={styles.msg}>
+          Already have an account?{" "}
+          <span
+            className={styles.sign}
+            onClick={() => {
+              navigate("/Login");
+            }}
+          >
+            Sign in
+          </span>
+        </p>
+      </div>
     </div>
-    </div>
-    )
+  );
 }
+
 export default SignUp;

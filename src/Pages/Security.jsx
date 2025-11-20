@@ -1,29 +1,25 @@
-import "../CSS/Security.css"
-import Sidebar from '../Components/Sidebar';
+import styles from "../CSS/Security.module.css";
+import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
 import Scard from "../Components/Scard";
-function Security(){
-    return(
-        <div className="security-page">
-        <div id="main-container">
-        {/* <!-- LEFT SIDE CONTENT --> */}
-        <div id="left-content">
-        <Sidebar />
+
+function Security() {
+  return (
+    <div className={styles.securityPage}>
+      <div className={styles.mainContainer}>
+        {/* LEFT SIDE CONTENT */}
+        <div className={styles.leftContent}>
+          <Sidebar />
         </div>
-    
-    {/* <!-- MAIN CONTENT --> */}
 
-    <div id="main-content">
-        <Header/>
-        <Scard />
-
-
-
+        {/* MAIN CONTENT */}
+        <div className={styles.mainContent}>
+          <Header />
+          <Scard />
+        </div>
+      </div>
     </div>
-
-
-    </div>
-    </div>
-    )
+  );
 }
+
 export default Security;

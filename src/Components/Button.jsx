@@ -1,19 +1,23 @@
-import "../CSS/Button.css"
-function Button({type,id,text,variant="",onClick}){
+import styles from "../CSS/Button.module.css";
 
-    return(
-        <div>
-        <button 
-            type={type} 
-            id={id}
-            className={`btn-${variant}`}
-            onClick={onClick}>
-                {text}  
-           
-         </button>
-           
+function Button({ type, id, text, variant="", onClick, className="" }) {
+  const variantMap = {
+    signup: styles.btnSignup,
+    login: styles.btnLogin,
+    tips: styles.btnTips,
+    demo: styles.btnDemo,
+    profile: styles.btnProfile,
+    save: styles.saveBtn,
+    clear: styles.clearBtn
+  };
 
-        </div>
-    )
+  const finalClass = `${variantMap[variant] || ""} ${styles[className] || ""}`;
+
+  return (
+    <button type={type} id={id} className={finalClass} onClick={onClick}>
+      {text}
+    </button>
+  );
 }
+
 export default Button;
