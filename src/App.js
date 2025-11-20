@@ -1,11 +1,21 @@
-import Landing from "./HTMLcomponent/Landing";
-// import Card from "./Component/Card";
-
+import React from'react';
+import { BrowserRouter,Routes,Route} from 'react-router-dom';
+import Landing from './HTMLcomponent/Landing';
+import Notification from './HTMLcomponent/Notification';
+import Help from './HTMLcomponent/Help';
+import Overview from './HTMLcomponent/Overview';
 function App() {
   return (
+
     <>
-   <Landing />
-   {/* <Card name="flow 1"/> */}
+    <BrowserRouter>
+    <Routes>
+    <Route  path='/' element={<Landing  />}/>
+      <Route  path='/Notification' element={<Notification  />}/>
+      <Route  path='/Help' element={<Help  />}/>
+      <Route path='/Overview' element={<Overview />} />
+    </Routes>
+    </BrowserRouter>
      </>
   );
 }

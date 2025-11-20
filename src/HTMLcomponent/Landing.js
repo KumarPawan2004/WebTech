@@ -23,7 +23,7 @@ const Landing = ()=>{
                    <div> <Card name="Flow 1"/></div>
             </div>
         </div>
-            <div>
+            <div id='about'>
                 <h1 className="about"> About This Project</h1>
                 <p className="about-para">
                     This comprehensive template is designed for students and developers to practice modern<br />
@@ -40,6 +40,7 @@ const Landing = ()=>{
                 </div>
 
             </div>
+            <div id='services'>
             <h1 className="whats">What's Included</h1>
             <div className="what-included">
                 <Service />
@@ -53,6 +54,7 @@ const Landing = ()=>{
             </div>
             <div className="Footers">
                 <Footer />
+            </div>
             </div>
         </>
     )
