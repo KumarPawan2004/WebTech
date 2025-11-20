@@ -1,0 +1,57 @@
+.box{
+    height: 270px;
+    width: 500px;
+    border: 2px solid rgb(161, 161, 161);
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px -5px 0px #293c7c;
+
+}
+.Larrow{
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    padding: 15px 18px;
+    border-radius: 10px;
+    background-color: #20d1c8;
+    border: none;
+}
+.Rarrow{
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    padding: 15px 18px;
+    border-radius: 10px;
+    background-color: #20d1c8;
+    border: none;
+
+}
+.vert{
+    display: flex;
+}
+.vert button{
+    height: 20px;
+    width: 30px;
+    background-color: #20d1c8;
+    border-radius: 45px;
+    border: none;
+}
+.btn1{
+    position: absolute;
+    bottom: 10px;
+    left: 220px;
+}
+.btn2{
+    position: absolute;
+    bottom: 10px;
+    left: 255px;
+}
+.btn3{
+    position: absolute;
+    bottom: 10px;
+    left: 290px;
+}

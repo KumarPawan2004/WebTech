@@ -1,0 +1,39 @@
+.Ncard-first,
+.Ncard-second{
+    width: 420px;
+    height: 150px;
+    background-color: #F1F3F4;
+    border: 1px solid #4ECDC4;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 8px;
+}
+.Ncard-second{
+    /* height: 150px; */
+    width: 97.5%;
+    /* background-color: #F1F3F4;
+    border: 1px solid #4ECDC4;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 8px; */
+
+}
+.title{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-top: -5px;
+}
+.text{
+    font-size: 14px;
+    margin-top: 7px;
+}
+.notification{
+    font-size: 16px;
+    color: black;
+    margin-top: 7px;
+}

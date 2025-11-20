@@ -1,0 +1,73 @@
+.sidebar{
+    width: 270px;
+    height: 100vh;
+    background-color: white;   
+    overflow-y: hidden;
+    border-right: 1px solid #4ECDC480;
+    box-shadow: 14px 0px 6px rgba(78, 205, 196, 0.5);
+
+}
+.DU{
+    width: fit-content;
+    padding: 8px 13px;
+    font-size: xx-large;
+    color: white;
+    background-color: #0A2463;
+    line-height: 40px;
+    border-radius: 10px;
+
+}
+.sidebar-header{
+    display: flex;
+    gap: 10px;
+    margin-left: -10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    box-shadow: 0px 4px 6px rgba(78, 205, 196, 0.5);
+    margin-top: 20px;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+}
+.demo1{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-weight: bold;
+}
+.demo2{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.dash{
+    color: black;
+    font-size: small;
+    font-weight: bold;
+    margin: 20px;
+    margin-bottom: 10px;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+.nav > div{
+    width: 70%;
+    margin-left: 20px;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: small;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.nav > div:hover{
+    background-color: #F1F3F4;
+    border: 1px solid #4ECDC480;  
+    border-left: 5px solid #4ECDC480; 
+    cursor: pointer;
+}
+.account{
+    margin-top: 120px;
+}

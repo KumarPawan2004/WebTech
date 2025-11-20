@@ -1,0 +1,28 @@
+.Footer{
+    width: 100%;
+    background-color: #293c7c;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+.bttns{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding-left: 350px;   
+}
+
+.bttns button{
+    padding: 10px 20px;
+    background-color: #293c7c;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+h4{
+    color: white;
+    padding-left: 60px;
+}
